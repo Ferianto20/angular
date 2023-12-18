@@ -1,0 +1,42 @@
+<!-- src/app/app.component.html -->
+
+<div class="mat-elevation-z8">
+  <div class="search-input">
+  <button class="addbutton" mat-raised-button [routerLink]="['/category/create']">Add Category</button>
+  <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="searchTerm" (ngModelChange)="applyFilter()">
+  </div>
+<table mat-table [dataSource]="filteredCategories || category" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th class="header header-nomor" mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let category"> {{category.id}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="category_name">
+      <th mat-header-cell class="category_name" *matHeaderCellDef> Category Name </th>
+      <td mat-cell *matCellDef="let category"> {{category.category_name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef class="description"> Description </th>
+      <td mat-cell *matCellDef="let category"> {{category.description}} </td>
+    </ng-container>
+    <ng-container matColumnDef="action" class="column-action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let category"> 
+        <div class="action">
+          <button class="updatebutton" mat-raised-button [routerLink]="['/category/list/update', category.id]" routerLinkActive="active">update</button>
+          <button class="deletebutton" mat-raised-button (click)="deleteCategory(category.id)">Delete</button>
+        </div>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[3, 5, 10]" [pageSize]="pageSize" [pageIndex]="currentPage" (page)="onPageChange($event)"
+  showFirstLastButtons [length]="length"></mat-paginator>
+</div>

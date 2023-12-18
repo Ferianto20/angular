@@ -1,0 +1,34 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.example-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.example-full-width {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.button .submit {
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  /* Bootstrap red color */
+  font-size: 12px;
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 10px;
+
+}

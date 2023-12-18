@@ -1,0 +1,14 @@
+<div class="container">
+  <form class="example-form" *ngIf="category">
+    <mat-form-field class="example-full-width">
+      <mat-label>Category Name</mat-label>
+        <input matInput placeholder="Ex. Category Name" [(ngModel)]="category.category_name" name="category_name" required>
+      <div class="invalid-feedback" *ngIf="valid"> Category Name is required</div>
+   </mat-form-field>
+    <mat-form-field class="example-full-width">
+     <mat-label>Description</mat-label>
+      <textarea matInput placeholder="description" [(ngModel)]="category.description" name="description" required="true"></textarea>
+    </mat-form-field>
+      <button class="example-full-width" mat-raised-button (click)="updateCategory()">Update Category</button>
+  </form>
+</div>

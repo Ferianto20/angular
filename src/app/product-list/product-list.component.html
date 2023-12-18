@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Category Name</th>
+      <!-- Add other table headers as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productsWithCategories">
+      <td>{{ product.id }}</td>
+      <td>{{ product.product_name }}</td>
+      <td>{{ product.category_name }}</td>
+      <!-- Add other table cells as needed -->
+    </tr>
+  </tbody>
+</table>

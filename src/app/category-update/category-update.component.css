@@ -1,0 +1,51 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.example-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.example-full-width {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.button .submit {
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  /* Bootstrap red color */
+  font-size: 12px;
+  margin-top: 10px;
+  position: absolute;
+  margin-left: 10px;
+
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 100px;
+  background-color: #f8f8f8;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

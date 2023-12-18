@@ -1,0 +1,19 @@
+.user-form {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 40px;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 16px;
+}
